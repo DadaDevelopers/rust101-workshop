@@ -1,0 +1,16 @@
+[workspace]
+resolver = "2"
+
+members = [
+    "day1/session2_syntax",
+    "day1/session3_integers_variables",
+    "day1/session4_branching_loops",
+    "day1/session5_panics",
+    "day1/session6_overflow",
+    "day1/session7_capstone",
+    "day2/session8_structs_ownership",
+    "day2/session9_validation",
+    "day2/session10_modules",
+    "day2/session11_stack_heap",
+    "day2/session12_destructors",
+]
