@@ -1,6 +1,7 @@
 # Rust 101 Workshop
 
-A two-day hands-on Rust workshop. You will write real code from the first session, no slides-only stretches :)). Every concept is immediately followed by an exercise you implement.
+A two-day hands-on Rust workshop. You will write real code from the first session, no slides-only stretches :))
+ Every concept is immediately followed by an exercise you implement.
 
 ---
 
@@ -113,16 +114,6 @@ Open `src/lib.rs` for the current session. You'll work through the `todo!()` stu
 cargo test -p session3_integers_variables
 ```
 
-When you're happy with a session, push it:
-
-```bash
-git add .
-git commit -m "session3: implement btc_to_sats"
-git push
-```
-
-GitHub will run the full test suite automatically. Check the **Actions** tab on your fork to see green or red.
-
 ### End of day — capstone (group project)
 
 Sessions 7 and 12 are group capstones. Work in small groups to complete the `src/main.rs` TODOs, then run it and present to the room:
@@ -210,11 +201,11 @@ cargo clippy --workspace --all-targets
 
 ## Getting Help
 
-- Ask your neighbour first
+- Ask your neighbour
 - Flag the facilitator
 - Rust docs: https://doc.rust-lang.org/book/
 - Rust by Example: https://doc.rust-lang.org/rust-by-example/
 
 ---
 
-*Built for the Rust 101 Workshop. Have fun, and welcome to Rust.*
+*Built for the Dada Devs Rust 101 Workshop. Have fun, and welcome to Rust.*
