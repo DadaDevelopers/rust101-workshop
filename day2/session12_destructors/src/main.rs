@@ -1,13 +1,11 @@
-// SESSION 12 — Day 2 Capstone: UTXO Wallet (group project)
-// Run with: cargo run
+// SESSION 12 — Day 2 Capstone: UTXO Wallet
+// Run with: cargo run -p session12_destructors
 //
-// Groups build a mini in-memory UTXO wallet that:
+// Build a mini in-memory UTXO wallet that:
 //   1. Holds a list of UTXOs (txid, vout, value)
 //   2. Can add and spend UTXOs
-//   3. Tracks a wallet lock file — dropped automatically when the wallet closes
-//   4. Prints a summary of available balance
-//
-// Work through the TODOs below, then present your running wallet to the room.
+//   3. Tracks a wallet lock released automatically on drop
+//   4. Prints available balance
 
 #[derive(Debug)]
 struct Utxo {
@@ -20,7 +18,7 @@ struct WalletLock {
     path: String,
 }
 
-// TODO: implement Drop for WalletLock so it prints "Released lock: <path>" when dropped.
+// TODO: implement Drop for WalletLock — print "Released lock: <path>" when dropped.
 impl Drop for WalletLock {
     fn drop(&mut self) {
         todo!()
@@ -43,13 +41,12 @@ impl Wallet {
         todo!()
     }
 
-    // TODO: return the total balance across all UTXOs.
+    // TODO: return total balance across all UTXOs.
     fn balance(&self) -> u64 {
         todo!()
     }
 
-    // TODO: spend the UTXO at `index`, removing it from the list and returning its value.
-    // Panic if the index is out of bounds.
+    // TODO: remove the UTXO at `index` and return its value. Panic if out of bounds.
     fn spend(&mut self, index: usize) -> u64 {
         todo!()
     }

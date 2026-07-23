@@ -1,6 +1,6 @@
 # Rust 101 Workshop
 
-A two-day hands-on Rust workshop. You will write real code from the first session — no slides-only stretches. Every concept is immediately followed by an exercise you implement and push.
+A two-day hands-on Rust workshop. You will write real code from the first session, no slides-only stretches :)). Every concept is immediately followed by an exercise you implement.
 
 ---
 
@@ -58,7 +58,7 @@ Replace `YOUR_USERNAME` with your actual GitHub username.
 code .
 ```
 
-Install the **rust-analyzer** extension when VS Code prompts you — it gives you inline errors, completions, and type hints as you type.
+Install the **rust-analyzer** extension.
 
 ### Step 4 — Verify everything compiles
 
@@ -96,25 +96,24 @@ Each session folder contains:
 
 | File | Purpose |
 |---|---|
-| `src/main.rs` | **Follow-along** — live coding during the session, run with `cargo run` |
-| `src/lib.rs` | **Mini exercises** — `todo!()` stubs you fill in after each concept |
-| `tests/tests.rs` | **CI-checked tests** — go green when your implementation is correct |
+| `src/lib.rs` | `todo!()` stubs — filled in together during the session |
+| `tests/tests.rs` | CI-checked tests — go green when your implementation is correct |
+
+Capstone sessions (7 and 12) also have a `src/main.rs` — a runnable program your group builds and presents at the end of the day.
 
 ---
 
 ## How Exercises Work
 
-### During the session — follow along
+### During each session
 
-Open `src/main.rs` for the current session. The facilitator will write code live on the projector; you type along. Run it with:
+Open `src/lib.rs` for the current session. You'll work through the `todo!()` stubs together as a group. Run the tests at any point to see how you're doing:
 
 ```bash
-cargo run -p session3_integers_variables
+cargo test -p session3_integers_variables
 ```
 
-### After each concept — mini exercises (5–10 min)
-
-Open `src/lib.rs`. Find the `todo!()` stubs and implement them. Push when you're ready:
+When you're happy with a session, push it:
 
 ```bash
 git add .
@@ -122,11 +121,15 @@ git commit -m "session3: implement btc_to_sats"
 git push
 ```
 
-GitHub will automatically run the tests. Check the **Actions** tab on your fork to see green or red.
+GitHub will run the full test suite automatically. Check the **Actions** tab on your fork to see green or red.
 
 ### End of day — capstone (group project)
 
-Sessions 7 and 12 are group capstones. You will work in small groups to complete a larger `src/main.rs` with multiple connected TODOs, then present your running program to the room.
+Sessions 7 and 12 are group capstones. Work in small groups to complete the `src/main.rs` TODOs, then run it and present to the room:
+
+```bash
+cargo run -p session7_capstone
+```
 
 ---
 
@@ -193,8 +196,8 @@ cargo check -p session4_branching_loops
 # Run tests for one session
 cargo test -p session4_branching_loops
 
-# Run the follow-along binary for a session
-cargo run -p session4_branching_loops
+# Run a capstone (sessions 7 and 12)
+cargo run -p session7_capstone
 
 # Format all code
 cargo fmt --all
