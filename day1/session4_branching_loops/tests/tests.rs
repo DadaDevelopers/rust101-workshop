@@ -9,7 +9,9 @@ fn test_fee_tier() {
 }
 
 #[test]
-fn test_total_value() {
-    assert_eq!(total_value(&[]), 0);
-    assert_eq!(total_value(&[1000, 2000, 3000]), 6000);
+fn test_is_confirmed() {
+    assert!(!is_confirmed(0));
+    assert!(!is_confirmed(5));
+    assert!(is_confirmed(6));
+    assert!(is_confirmed(100));
 }

@@ -7,8 +7,8 @@ pub fn fee_tier(sats_per_vbyte: u64) -> &'static str {
     todo!()
 }
 
-/// Sum all values in a UTXO set (slice of satoshi amounts).
+/// Return true if a transaction is confirmed (confirmations >= 6).
 /// TODO: implement this function.
-pub fn total_value(utxos: &[u64]) -> u64 {
+pub fn is_confirmed(confirmations: u32) -> bool {
     todo!()
 }
