@@ -1,24 +1,23 @@
 use session5_panics::*;
 
 #[test]
-fn test_get_output() {
-    assert_eq!(get_output(&[1000, 2000], 0), 1000);
-    assert_eq!(get_output(&[1000, 2000], 1), 2000);
+fn test_safe_divide() {
+    assert_eq!(safe_divide(10, 2), 5);
+}
+
+#[test]
+#[should_panic(expected = "Cannot divide by zero!")]
+fn test_safe_divide_panics() {
+    safe_divide(10, 0);
+}
+
+#[test]
+fn test_first_fee() {
+    assert_eq!(first_fee(&[250, 180, 320]), 250);
 }
 
 #[test]
 #[should_panic]
-fn test_get_output_out_of_bounds() {
-    get_output(&[1000], 5);
-}
-
-#[test]
-fn test_change() {
-    assert_eq!(change(10_000, 8_000, 500), 1_500);
-}
-
-#[test]
-#[should_panic]
-fn test_change_overspend() {
-    change(1_000, 900, 200);
+fn test_first_fee_panics_on_empty() {
+    first_fee(&[]);
 }

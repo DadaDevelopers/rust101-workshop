@@ -1,13 +1,12 @@
-/// Return the output value at `index` from the outputs slice.
-/// Panics if the index is out of bounds.
+/// Divide a by b. Panic with the message "Cannot divide by zero!" if b is 0.
 /// TODO: implement this function.
-pub fn get_output(outputs: &[u64], index: usize) -> u64 {
+pub fn safe_divide(a: u64, b: u64) -> u64 {
     todo!()
 }
 
-/// Return the change amount: `input - output - fee`.
-/// Panics if output + fee exceeds input (can't spend what you don't have).
+/// Return the first fee in the list.
+/// Panics if the list is empty.
 /// TODO: implement this function.
-pub fn change(input: u64, output: u64, fee: u64) -> u64 {
+pub fn first_fee(fees: &[u64]) -> u64 {
     todo!()
 }
